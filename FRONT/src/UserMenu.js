@@ -1,44 +1,82 @@
 import React from "react";
-import {Link} from 'react-router-dom'
 import Element from "./Element";
-import ElementGauche from "./ElementGauche"
-import pastry1 from "./Assets/6385d28a5061eebf3f8e4397_Bun (1).png"
-import pastry2 from "./Assets/6385d2345061ee20188e3ef3_Bun (3).png"
-import pastry3 from "./Assets/6385d27eecbbb40dc8b77816_Bun (4).png"
-import pastry4 from "./Assets/6391e44823d64f1496e0d3ed_Bun (6).png"
-import pastry5 from "./Assets/6385d24b2e29bd1c59e9c6fe_Croissant.png"
-import pastry6 from "./Assets/6391e2ef0f48f9c3a8431336_Donut (1).png"
+import Navigation from "./Navigation";
+import coffee1 from "./Assets/6385f858d5a2328664cd75e2_cup_of_coffee (1).png"
+import coffee2 from "./Assets/6385f88f591f6fc670d5d76e_cup_of_coffee (3).png"
+import coffee3 from "./Assets/6385f89b4157993b872fa1f6_cup_of_coffee (4).png"
+import coffee4 from "./Assets/6385f8a7e12aa03b71fe68c3_cup_of_coffee (5).png"
+import coffee5 from "./Assets/6385f8b5d5a2324a82cd7a03_cup_of_coffee (6).png"
+import coffee6 from "./Assets/6385f8edd5a2324496cd7c19_cup_of_coffee (8).png"
+import coffee7 from "./Assets/cafe6.png"
 import Navbar from "./Navbar";
+import BasDePage from "./BasDePage";
+const menuData = [
+  {
+    title: "Espresso",
+    description: "A strong and concentrated coffee served in small amounts.",
+    price: 5.99,
+    img: coffee1,
+  },
+  {
+    title: "Latte",
+    description: "A coffee drink made with espresso and steamed milk.",
+    price: 4.99,
+    img: coffee2,
+  },
+  {
+    title: "Cappuccino",
+    description: "A coffee drink that combines espresso, steamed milk, and frothed milk.",
+    price: 4.99,
+    img: coffee4,
+  },
+  {
+    title: "Americano",
+    description: "A diluted espresso with hot water, similar to drip coffee.",
+    price: 4.99,
+    img: coffee3,
+  },
+  {
+    title: "Macchiato",
+    description: "An espresso with a small amount of frothed milk.",
+    price: 4.99,
+    img: coffee5,
+  },
+  {
+    title: "Mocha",
+    description: "A chocolate-flavored variant of a latte, often with whipped cream.",
+    price: 4.99,
+    img: coffee6,
+  },
+  {
+    title: "Iced Coffee",
+    description: "Chilled coffee served over ice, often sweetened and with milk.",
+    price: 4.99,
+    img: coffee7,
+  },
+];
 
 const UserMenu = () => {
-    
-    return (<div className=" ">
-        <Navbar></Navbar>
- {/* je dois faire une fonction qui va handle on click  */}
-        <div className="flex flex-row justify-center m-16">
-        <div>
-        <p className="text-lg font-medium px-8 pt-4 text-[#7B3F00]">Pastry</p>
-        <Link to="/UserMenu" ><div className="border-b h-4 border-[#7B3F00] w-32"></div></Link>
+  return (
+    <div>
+      <Navbar></Navbar>
+      <Navigation />
+      <div className="grid grid-cols-2 mx-12 ">
+          {menuData.map((item, index) => (
+        <div className="m-12 ">
+            <Element
+              key={index}
+              title={item.title}
+              description={item.description}
+              price={item.price}
+              img={item.img}
+            />
         </div>
-        <div>
-        <p className="text-lg font-medium px-8 pt-4 text-[#7B3F00]">Coffee</p>
-        <Link to="/UserMenu2" ><div className="border-b h-4 border-[#7B3F00] w-32" ></div></Link>
-        </div>
-        </div>
+          ))}
+      </div>
+      <BasDePage></BasDePage>  
+      
+    </div>
+  );
+};
 
-       <div className="flex justify-around">
-       <div className="my-12">
-        <Element title="Croissant" description="un leger croissant avec une pate feuilleté aerienne " price="150" img={pastry5} ></Element>
-        <ElementGauche title="Viennoiserie" description="une viennoiserie suculente saupoudrée de sucre glace fondant  " price="25" img={pastry1} ></ElementGauche>
-        <Element title="Croissant" description=" une viennoiserie au chocolat suculente saupoudrée de sucre glace fondant" price="160" img={pastry2} ></Element>
-        </div>     
-        <div className="my-12">
-        <Element title="Croissant" description="un leger croissant avec une pate feuilleté aerienne " price="150" img={pastry5} ></Element>
-        <ElementGauche title="Viennoiserie" description="une viennoiserie suculente saupoudrée de sucre glace fondant  " price="25" img={pastry1} ></ElementGauche>
-        <Element title="Croissant" description=" une viennoiserie au chocolat suculente saupoudrée de sucre glace fondant" price="160" img={pastry2} ></Element>
-        </div>     
-       </div>
-    </div>  );
-}
- 
 export default UserMenu;

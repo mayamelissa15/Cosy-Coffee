@@ -1,44 +1,105 @@
 import React from "react";
-import {Link} from 'react-router-dom'
 import Element from "./Element";
-import ElementGauche from "./ElementGauche"
-import coffee1 from "./Assets/6385f858d5a2328664cd75e2_cup_of_coffee (1).png"
-import coffee2 from "./Assets/6385f88f591f6fc670d5d76e_cup_of_coffee (3).png"
-import coffee3 from "./Assets/6385f89b4157993b872fa1f6_cup_of_coffee (4).png"
-import coffee4 from "./Assets/6385f8a7e12aa03b71fe68c3_cup_of_coffee (5).png"
-import coffee5 from "./Assets/6385f8b5d5a2324a82cd7a03_cup_of_coffee (6).png"
-import coffee6 from "./Assets/6385f8edd5a2324496cd7c19_cup_of_coffee (8).png"
+import Navigation from "./Navigation";
+import pastry1 from "./Assets/p1.png"
+import pastry2 from "./Assets/p2.png"
+import pastry3 from "./Assets/p3.png"
+import pastry4 from "./Assets/p4.png"
+import pastry5 from "./Assets/p5.png"
+import pastry6 from "./Assets/p6.png"
+import pastry7 from "./Assets/p7.png"
+import pastry8 from "./Assets/p8.png"
+import pastry9 from "./Assets/p9.png"
+import pastry10 from "./Assets/p10.png"
+import pastry11 from "./Assets/p11.png"
 import Navbar from "./Navbar";
+import BasDePage from "./BasDePage";
+const menuData = [
+    {
+      title: "Croissant fruité",
+      description: "A flaky and buttery French pastry.",
+      price: 5.99,
+      img: pastry1,
+    },
+    {
+      title: "Danish",
+      description: "A sweet and multilayered pastry filled with fruit, cream, or other ingredients.",
+      price: 4.99,
+      img: pastry2,
+    },
+    {
+      title: "Croissant",
+      description: "A rolled pastry filled with cinnamon and sugar, typically topped with icing.",
+      price: 4.99,
+      img: pastry4,
+    },
+    {
+      title: "Palmier",
+      description: "A palm-shaped pastry made of puff pastry, sugar, and sometimes cinnamon.",
+      price: 5.99,
+      img: pastry1,
+    },
+    {
+      title: "Éclair",
+      description: "A long, thin pastry filled with cream and topped with icing.",
+      price: 4.99,
+      img: pastry2,
+    },
+    {
+      title: "Profiterole",
+      description: "A small, round pastry filled with cream or custard, often served with chocolate sauce.",
+      price: 4.99,
+      img: pastry4,
+    },
+    {
+      title: "Napoleon",
+      description: "A layered pastry with flaky pastry, pastry cream, and icing.",
+      price: 4.99,
+      img: pastry3,
+    },
+    {
+      title: "Macaron",
+      description: "A sweet meringue-based pastry made with egg white, icing sugar, granulated sugar, almond meal, and food coloring.",
+      price: 4.99,
+      img: pastry5,
+    },
+    {
+      title: "Chocolate Tart",
+      description: "A tart filled with rich and decadent chocolate ganache.",
+      price: 4.99,
+      img: pastry6,
+    },
+    {
+      title: "Iced Pastry",
+      description: "Chilled pastry served over ice, often sweetened and with milk.",
+      price: 4.99,
+      img: pastry7,
+    },
+  ];
+  
 
-const UserMenu = () => {
-    
-    return (<div className=" ">
-        <Navbar></Navbar>
- {/* je dois faire une fonction qui va handle on click  */}
-        <div className="flex flex-row justify-center m-16">
-        <div>
-        <p className="text-lg font-medium px-8 pt-4 text-[#7B3F00]">Pastry</p>
-        <Link to="/UserMenu" ><div className="border-b h-4 border-[#7B3F00] w-32"></div></Link>
+const UserMenu2 = () => {
+  return (
+    <div>
+      <Navbar></Navbar>
+      <Navigation />
+      <div className="grid grid-cols-2 mx-12 ">
+          {menuData.map((item, index) => (
+        <div className="m-12 ">
+            <Element
+              key={index}
+              title={item.title}
+              description={item.description}
+              price={item.price}
+              img={item.img}
+            />
         </div>
-        <div>
-        <p className="text-lg font-medium px-8 pt-4 text-[#7B3F00]">Coffee</p>
-        <Link to="/UserMenu2" ><div className="border-b h-4 border-[#7B3F00] w-32" ></div></Link>
-        </div>
-        </div>
+          ))}
+      </div>
+      <BasDePage></BasDePage>  
+      
+    </div>
+  );
+};
 
-       <div className="flex justify-around">
-       <div className="my-12">
-        <Element title="Cappucino" description="un leger Cappucino avec une pate feuilleté aerienne " price="150" img={coffee5} ></Element>
-        <ElementGauche title="Espresso Laté" description="une Espresso Laté suculente saupoudrée de sucre glace fondant  " price="25" img={coffee1} ></ElementGauche>
-        <Element title="Cappucino" description=" une Espresso Laté au chocolat suculente saupoudrée de sucre glace fondant" price="160" img={coffee2} ></Element>
-        </div>     
-        <div className="my-12">
-        <Element title="Cappucino" description="un leger Cappucino avec une pate feuilleté aerienne " price="150" img={coffee3} ></Element>
-        <ElementGauche title="Espresso Laté" description="une Espresso Laté suculente saupoudrée de sucre glace fondant  " price="25" img={coffee4} ></ElementGauche>
-        <Element title="Cappucino" description=" une Espresso Laté au chocolat suculente saupoudrée de sucre glace fondant" price="160" img={coffee6} ></Element>
-        </div>     
-       </div>
-    </div>  );
-}
- 
-export default UserMenu;
+export default UserMenu2;

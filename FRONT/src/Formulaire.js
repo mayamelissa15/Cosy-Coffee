@@ -33,7 +33,7 @@ const HandleClick = async e =>{
 
 
     return ( 
-  <div className="m-32 py-8 rounded-lg flex flex-col items-center bg-white shadow-xl">
+  <div className="bg-[#fef5f1] m-32 py-8 rounded-lg flex flex-col items-center shadow-xl">
   <h2 className="text-3xl font-semibold  mb-8 text-[#7B3F00]">Réservez une table</h2>
   <div className="flex justify-between p-4 ">
     <div><img src={pastry} className='h-96'></img></div>

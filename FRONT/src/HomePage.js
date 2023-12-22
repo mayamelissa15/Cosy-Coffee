@@ -12,13 +12,13 @@ import coffee3 from "./Assets/6385f89b4157993b872fa1f6_cup_of_coffee (4).png"
 import coffee4 from "./Assets/6385f8a7e12aa03b71fe68c3_cup_of_coffee (5).png"
 import coffee5 from "./Assets/6385f8b5d5a2324a82cd7a03_cup_of_coffee (6).png"
 import coffee6 from "./Assets/6385f8edd5a2324496cd7c19_cup_of_coffee (8).png"
-import coffee7 from "./Assets/6385f907e50ee522170f4745_cup_of_coffee (10).png"
-import pastry1 from "./Assets/6385d28a5061eebf3f8e4397_Bun (1).png"
-import pastry2 from "./Assets/6385d2345061ee20188e3ef3_Bun (3).png"
-import pastry3 from "./Assets/6385d27eecbbb40dc8b77816_Bun (4).png"
-import pastry4 from "./Assets/6391e44823d64f1496e0d3ed_Bun (6).png"
-import pastry5 from "./Assets/6385d24b2e29bd1c59e9c6fe_Croissant.png"
-import pastry6 from "./Assets/6391e2ef0f48f9c3a8431336_Donut (1).png"
+import coffee7 from "./Assets/cafe6.png"
+import pastry1 from "./Assets/p1.png"
+import pastry2 from "./Assets/p2.png"
+import pastry3 from "./Assets/p3.png"
+import pastry4 from "./Assets/p4.png"
+import pastry5 from "./Assets/p5.png"
+import pastry6 from "./Assets/p6.png"
 import UserMenu from "./UserMenu";
 import Banniere from "./Banniere";
 const HomePage = () => {
@@ -39,7 +39,7 @@ const HomePage = () => {
       {cardImg : pastry5 },
       {cardImg : pastry6 }
     ]
-    return (  <div className="scroll-smooth  bg-[#fef5f1]">
+    return (  <div className="scroll-smooth  bg-white">
     <Navbar></Navbar>
    
     <Menu></Menu>

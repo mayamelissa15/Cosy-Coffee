@@ -1,4 +1,5 @@
-import coffee from './Assets/6378d1abab345038ecf839cb_coffee_cookies-p-800.png';
+import coffee from './Assets/coffee.png';
+import { Link } from 'react-router-dom';
 const Menu = () => {
     return ( <div className='flex flex-row gap-4'>
         <div className="pl-32 py-32 ">
@@ -9,12 +10,12 @@ const Menu = () => {
      Welcome to the Cozy Literary Café, the perfect place for coffee and book enthusiasts.
      Our café offers a carefully curated selection of delightful beverages, fresh pastries, and a snug reading book.
      </p>
-
+<Link to='/formulaire'>
      <div className="flex flex-row text-xs font-medium">
      <button type="submit" className="cursor-pointer bg-[#7B3F00] mx-auto text-white px-6 py-3 mx-2 rounded-full hover:shadow-md  hover:bg-black duration-500 ">Command</button>
-     </div>
+     </div></Link>
             </div>
-<img src={coffee} className='w-[700px]'></img>
+<img src={coffee} className='w-full h-full py-2'></img>
         </div> );
 }
  

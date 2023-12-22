@@ -16,7 +16,7 @@ const Navbar = () => {
          <li ><Link to="/UserMenu" class="nav-Links "  >Menu</Link></li>
          <li ><Link to="/Formulaire" class="nav-Links "  >Reservation</Link></li> 
          {/* <!-- drop down here books/Tables --> */}
-         <li ><Link to="" class="nav-Links "  >About us</Link></li>
+         <li ><Link to="/About" class="nav-Links "  >About us</Link></li>
          {/* <!-- Hostorique/produit/PageInstagram/Reseaux --> */}
      </ul>
  </div>
