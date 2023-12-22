@@ -4,7 +4,7 @@ import './style.css'
 import logo from './Assets/cosy_coffee-removebg-preview.png'
 const Navbar = () => {
     return ( <div class=" shadow-md   ">
-    <navbar class=" flex justify-between gap-2 text-md text-black font-medium   ">
+    <navbar class=" bg-white flex justify-between gap-2 text-md text-black font-medium   ">
      <logo className="p-6">
         CosyCoffe
     {/* <img src={logo} className='w-16 h-16' ></img> */}

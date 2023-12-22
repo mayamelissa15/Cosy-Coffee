@@ -31,12 +31,12 @@ const Slider = ({props}) => {
       <div className="cosy-page">
         <div className="cosy-header">
           <div className="">
-           <h1 className="text-2xl text-[#7B3F00] font-semibold ">Our Falvors</h1>
-            <p className="text-lg font-normal text-[#19182580]  py-2 ">  Our café offers a carefully curated selection of delightful and cosy treats</p>
+           <h1 className="text-2xl text-slate-800 font-semibold ">Our Falvors</h1>
+            <p className="text-lg font-normal text-slate-800  py-2 ">  Our café offers a carefully curated selection of delightful and cosy treats</p>
           </div>
-          <div className="slide">
-            <BtnSlider moveSlide={prevSlide} direction="prev" ></BtnSlider>
-            <BtnSlider moveSlide={nextSlide} direction="next" ></BtnSlider>
+          <div className="slide ">
+           <div className="bg-white rounded-full p-8 hover:bg-black hover:text-white duration-500"><BtnSlider moveSlide={prevSlide} direction="prev" ></BtnSlider></div> 
+           <div className="bg-white rounded-full p-8 hover:bg-black hover:text-white duration-500" > <BtnSlider moveSlide={nextSlide} direction="next" ></BtnSlider></div>
           </div>
         </div>
   

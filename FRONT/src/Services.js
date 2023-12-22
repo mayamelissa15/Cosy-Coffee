@@ -8,7 +8,7 @@ const Services = () => {
     return ( <div className="m-24" >
        
         <h1 className="text-3xl text-[#7B3F00] font-semibold text-center">Our delicious services</h1>
-        <p className="text-xl font-normal text-slate-700 text-center py-4 ">Indulge in the perfect trio at our coffee haven – from rich brews and tempting pastries to grab-and-go convenience, we've got your cravings covered. Immerse yourself in the cozy ambiance, where every sip and bite is a delightful escape into coffee bliss. Your perfect coffee moment awaits!
+        <p className="text-xl font-normal text-slate-700 text-center py-4 ">Indulge in the perfect trio at our coffee haven – from rich brews and tempting pastries to grab-and-go convenience
         </p>
 <div> 
     {/* hada yweli component pastry/coffee/books */}

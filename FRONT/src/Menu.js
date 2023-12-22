@@ -5,7 +5,7 @@ const Menu = () => {
        <h1 className=" my-16 text-4xl font-bold  ">
      Where every <span className="text-[#7B3F00]" > coffee </span> has its own story
      </h1>
-     <p className="my-6 text-lg font-normal text-[#19182580]">
+     <p className="my-6 text-lg font-normal text-slate-800">
      Welcome to the Cozy Literary Café, the perfect place for coffee and book enthusiasts.
      Our café offers a carefully curated selection of delightful beverages, fresh pastries, and a snug reading book.
      </p>

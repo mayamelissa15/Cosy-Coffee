@@ -13,3 +13,4 @@ rajouter lofique des reservation de la table car sinon projet vide
 ( specifiez un week end )
 
 
+la maintenant je dois arranger sidebar
