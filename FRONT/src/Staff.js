@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from 'axios'
+import Sidebar from "./Sidebar";
 const Staff = () => {
     const [staff , setStaff] = useState([])
     useEffect(()=>{
@@ -32,36 +33,8 @@ const handleDelete = async (IdStaff)=>{
   return (
     
     <div className=" flex justify-between gap-2 ">
-<div className="bg-gray-800  w-1/5 text-white"> 
-<div className="py-6 px-4">
-        <h1 className="text-2xl font-bold text-center">CoffeCosy Settings</h1>
-      </div>
-      <div className="">
-        <h1 className="text-xl font-bold text-center">Admin Profil</h1>
-      </div>
-      
-      <ul className="space-y-4 p-4">
-        <li>
-          <Link to="/AdminMenu" className="p-3 block hover:bg-gray-700 p-1 rounded">
-            Admin information
-          </Link></li>
-        <li>
-          <Link to="/AdminMenu/CoffeMenu" className="p-3 block hover:bg-gray-700 p-1 rounded">
-            Coffe Menu
-          </Link>    </li>
-        <li>
-          <Link to="/AdminMenu/PastryMenu" className="p-3 block hover:bg-gray-700 p-1 rounded">
-            Pastry Menu
-          </Link>    </li>
-        <li>
-          <Link to="/AdminMenu/Reservation" className="p-3 block hover:bg-gray-700 p-1 rounded">
-            Reservation
-          </Link>  </li>
-        <li>
-          <Link to="/AdminMenu/Staff" className="p-3 block bg-gray-700 p-1 rounded">
-            Staff information
-          </Link>    </li>
-      </ul>
+<div className="bg-gray-800   text-white"> 
+<Sidebar></Sidebar>
   </div>
   <div className=" w-4/5 m-8">
   <div className=" ">
@@ -69,15 +42,14 @@ const handleDelete = async (IdStaff)=>{
 <div>
     <table>
     <thead>
-      <tr className="text-md font-medium text-slate-700 ">
-        <th className="py-3 border-b p-4"></th>
-        <th className="py-3 border-b p-4">Name</th>
-        <th className="py-3 border-b p-4">Surname</th>
-        <th className="py-3 border-b p-4">Age</th>
-        <th className="py-3 border-b p-4">JOB</th>
-        <th className="py-3 border-b p-4">Phone Number</th>
-        <th></th>
-        <th></th>
+      <tr className="text-md text-slate-600 font-medium border-b py-4 ">
+        <th className="text-md text-slate-600 font-medium border-b px-12 py-4"></th>
+        <th className="text-md text-slate-600 font-medium border-b px-12 py-4">Name</th>
+        <th className="text-md text-slate-600 font-medium border-b px-12 py-4">Surname</th>
+        <th className="text-md text-slate-600 font-medium border-b px-12 py-4">Age</th>
+        <th className="text-md text-slate-600 font-medium border-b px-12 py-4">JOB</th>
+        <th className="text-md text-slate-600 font-medium border-b px-12 py-4">Phone Number</th>
+        
       </tr>
     </thead>
     <tbody>

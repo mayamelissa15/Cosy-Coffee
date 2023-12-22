@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 const Sidebar = () => {
     return ( <div>
-        <div className="bg-gray-800  text-white"> 
+        <div className="bg-gray-800 h-screen  text-white"> 
 <div className="py-6 px-4">
         <h1 className="text-2xl font-bold text-center">CoffeCosy Settings</h1>
       </div>
@@ -20,7 +20,7 @@ const Sidebar = () => {
             Coffe Menu
           </Link>    </li>
         <li>
-          <Link to="/AdminMenu/PastryMenu" className="p-3 block bg-gray-700 p-1 rounded">
+          <Link to="/AdminMenu/PastryMenu" className="p-3 block hover:bg-gray-700 p-1 rounded">
             Pastry Menu
           </Link>    </li>
         <li>

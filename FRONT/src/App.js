@@ -24,16 +24,16 @@ function App() {
     <Route path='/Login' Component={Login}/>
     <Route path='/UserMenu' Component={UserMenu}></Route>
     <Route path='/UserMenu2' Component={UserMenu2}></Route>
-    <Route path='/CoffeMenu' Component={CoffeMenu}></Route>
-    <Route path='/PastryMenu' Component={PastryMenu}></Route>
-    <Route path='/Staff' Component={Staff}></Route>
+    <Route path='AdminMenu/CoffeMenu' Component={CoffeMenu}></Route>
+    <Route path='AdminMenu/PastryMenu' Component={PastryMenu}></Route>
+    <Route path='AdminMenu/Staff' Component={Staff}></Route>
     {/*<Route path='/AdminMenu/reservation' Component={reservation}></Route> */}
     <Route path='/AdminMenu/Settings' Component={AdminMenu}></Route>
     <Route path='/AddingStaff' Component={AddingStaff}></Route>
     <Route path='/UpdateStaff/:id'   Component={UpdateStaff}></Route>
     <Route path='/AddingCafe' Component={AddingCafe}></Route>
     <Route path='/UpdateCafe/:id'   Component={UpdateCafe}></Route>
-    <Route path="/Reservation" Component={Reservation}></Route>
+    <Route path="AdminMenu/Reservation" Component={Reservation}></Route>
     </Routes>
    
 </div>
