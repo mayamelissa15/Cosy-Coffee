@@ -33,7 +33,7 @@ const handleDelete = async (IdStaff)=>{
   return (
     
     <div className=" flex justify-between gap-2 ">
-<div className="bg-gray-800   text-white"> 
+<div className="  text-white"> 
 <Sidebar></Sidebar>
   </div>
   <div className=" w-4/5 m-8">
@@ -62,18 +62,20 @@ const handleDelete = async (IdStaff)=>{
           <td className="text-md font-normal text-[#19182580] py-6 border-b p-6">{member.JOB}</td>
           <td className="text-md font-normal text-[#19182580] py-6 border-b p-6">{member.phoneNumber}</td>
          <td> <button className="Update mr-4 py-3 px-4 rounded-full border-0 text-md font-normal
-    bg-slate-50 text-slate-700
-      hover:bg-black hover:text-white  duration-500"><Link to={`/UpdateStaff/${member.IdStaff}`}>Update</Link></button></td>
+    bg-green-500 text-white
+      hover:bg-green-400 hover:text-white  duration-500"><Link to={`/UpdateStaff/${member.IdStaff}`}>Update</Link></button></td>
           <td><button className="mr-4 py-3 px-4 rounded-full border-0 text-md font-normal
-    bg-slate-50 text-slate-700
-      hover:bg-black hover:text-white  duration-500" onClick={()=>handleDelete(member.IdStaff)}>Delete</button></td>
+    bg-red-400 text-white
+      hover:bg-red-500 hover:text-white  duration-500" onClick={()=>handleDelete(member.IdStaff)}>Delete</button></td>
         </tr>
       ))}
 
     </tbody>
   </table>
   <div className="mt-4 flex flex-row-reverse">
-    <button className=" px-6 py-2 mx-2 rounded-full shadow-md  bg-black duration-500 text-white">add</button>
+  <button class="mr-4 py-3 px-4 rounded-full border-0 text-md font-normal
+    bg-green-500 text-white
+      hover:bg-green-400 hover:text-white  duration-500">add</button>
   </div>
 </div>
 </div>

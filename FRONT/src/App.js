@@ -11,6 +11,8 @@ import UserMenu2 from "./UserMenu2";
 import Staff from "./Staff"
 import AddingStaff from "./AddingStaff";
 import UpdateStaff from "./UpdateStaff";
+import AddingPastry from "./AddingPastry";
+import UpdatePastry from "./UpdatePastry";
 import AddingCafe from "./AddingCafe";
 import UpdateCafe from "./UpdateCafe";
 import Reservation from "./Reservation";
@@ -35,6 +37,8 @@ function App() {
     <Route path='/AddingStaff' Component={AddingStaff}></Route>
     <Route path='/UpdateStaff/:id'   Component={UpdateStaff}></Route>
     <Route path='/AddingCafe' Component={AddingCafe}></Route>
+    <Route path='/UpdatePastry/:id'   Component={UpdatePastry}></Route>
+    <Route path='/AddingPastry' Component={AddingPastry}></Route>
     <Route path='/UpdateCafe/:id'   Component={UpdateCafe}></Route>
     <Route path="AdminMenu/Reservation" Component={Reservation}></Route>
     <Route path='/formulaire' Component={Formulaire}></Route>

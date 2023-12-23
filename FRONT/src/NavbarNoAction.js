@@ -2,9 +2,9 @@ import profile from './Assets/account_circle.png'
 import { Link } from 'react-router-dom';
 const NavbarNoAction = () => {
     return ( <div>
-        <div class=" shadow-md   ">
+        <div class="   ">
     <navbar class=" bg-white flex justify-between gap-2 text-md text-black font-medium   ">
-     <logo className="p-6">
+     <logo className="p-4">
         CosyCoffe
     {/* <img src={logo} className='w-16 h-16' ></img> */}
      </logo>

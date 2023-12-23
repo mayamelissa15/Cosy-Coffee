@@ -104,10 +104,36 @@ app.get('/Staff', (req, res) => {
     });
   });
 
+  app.get('/PastryMenu', (req, res) => {
+    db.query('SELECT * FROM Patisserie', (err,data) => {
+      if (err) {
+        console.error('Error retrieving Patisserie data:', err);
+        return res.status(500).send('Internal Server Error');
+      } else {
+       return res.json(data)
+      }
+    });
+  });
+
   app.post("/AddingCafe", (req, res) => {
     const q = "INSERT INTO cafe (`IdCafe`, `Name`, `Description`, `PRICE` ) VALUES (?)";
     const values = [
       req.body.idCafe,
+      req.body.Name,
+      req.body.Description,
+      req.body.PRICE,
+      
+    ];
+    console.log(req)
+    db.query(q, [values], (err, data) => {
+      if (err) return res.send(err);
+      return res.json(data);
+    });
+  });
+  app.post("/AddingPatisserie", (req, res) => {
+    const q = "INSERT INTO Patisserie (`IdPatisserie`, `Name`, `Description`, `PRICE` ) VALUES (?)";
+    const values = [
+      req.body.idPatisserie,
       req.body.Name,
       req.body.Description,
       req.body.PRICE,

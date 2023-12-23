@@ -33,7 +33,7 @@ const CoffeMenu = () => {
   return (
     
     <div className=" flex justify-between gap-2 ">
-<div className="bg-gray-800 w-1/5 text-white"> 
+<div className="h-scren w-1/5 text-white"> 
 <Sidebar></Sidebar>
   </div>
   <div className=" w-4/5 m-8">
@@ -62,11 +62,11 @@ const CoffeMenu = () => {
         <td class="border-b py-4  ">
           
         <button className="Update mr-4 py-3 px-4 rounded-full border-0 text-md font-normal
-    bg-slate-50 text-slate-700
-      hover:bg-black hover:text-white  duration-500"><Link to={`/UpdateCafe/${element.IdCafe}`}>Update</Link></button>
+    bg-green-500 text-white
+      hover:bg-green-400 hover:text-white  duration-500"><Link to={`/UpdateCafe/${element.IdCafe}`}>Update</Link></button>
           <button className="mr-4 py-3 px-4 rounded-full border-0 text-md font-normal
-    bg-slate-50 text-slate-700
-      hover:bg-black hover:text-white  duration-500" onClick={()=>handleDelete(element.IdCafe)}>Delete</button>
+    bg-red-400 text-white
+      hover:bg-red-500 hover:text-white  duration-500" onClick={()=>handleDelete(element.IdCafe)}>Delete</button>
           
         </td>
       
@@ -81,7 +81,9 @@ const CoffeMenu = () => {
     </tbody>
   </table>
   <div class="mt-4 flex flex-row-reverse">
-    <button class=" px-6 py-2 mx-2 rounded-full shadow-md  bg-black duration-500 text-white">add</button>
+    <button class="mr-4 py-3 px-4 rounded-full border-0 text-md font-normal
+    bg-green-500 text-white
+      hover:bg-green-400 hover:text-white  duration-500">add</button>
   </div>
 </div>
 
