@@ -1,5 +1,5 @@
 const BasDePage = () => {
-    return ( <div class="py-10 bg-[#fef5f1] ">
+    return ( <div class="py-10 bg-[#F5F5DC] ">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
       <div class="text-black">
         <h1 class="text-2xl font-bold mb-4">Cozy Coffee</h1>

@@ -28,8 +28,8 @@ const TestimonialSlider = () => {
   );
 
   return (
-   <div className="bg-[#fef5f1] p-4">
-     <div className="m-32  testimonial-slider shadow-md bg-white  p-8">
+   <div className=" p-4">
+     <div className="m-32  testimonial-slider shadow-md bg-[#F5F5DC]  p-8">
 
 <h1 className="text-3xl  text-black font-medium text-center">What people say about us ! </h1>
 <span className="text-center bg-black w-2 h-2"></span>

@@ -33,20 +33,20 @@ const HandleClick = async e =>{
 
 
     return ( 
-  <div className="bg-[#fef5f1] m-32 py-8 rounded-lg flex flex-col items-center shadow-xl">
+  <div className="bg-[#F5F5DC] m-32 py-8 rounded-lg flex flex-col items-center shadow-xl">
   <h2 className="text-3xl font-semibold  mb-8 text-[#7B3F00]">Réservez une table</h2>
   <div className="flex justify-between p-4 ">
     <div><img src={pastry} className='h-96'></img></div>
    <div>
 
    <form className="flex flex-col w-[500px]" action='/' method='POST'>
-   <div className="mb-4">
+   {/* <div className="mb-4">
       <label for="IdComm" className="block text-sm font-medium text-slate-700">id</label>
       <input type="number" id="IdComm" name="IdComm" className="focus:outline-none mt-1 p-2 block w-full rounded-md  shadow-md after:content-['*'] after:ml-0.5 after:text-red-500" onChange={handleChange} placeholder="John Doe" required></input>
-    </div>
+    </div> */}
     <div className="mb-4">
-      <label for="name" className="block text-sm font-medium text-slate-700">Nom</label>
-      <input type="text" id="name" name="Name" className="focus:outline-none mt-1 p-2 block w-full rounded-md  shadow-md after:content-['*'] after:ml-0.5 after:text-red-500" onChange={handleChange} placeholder="John Doe" required></input>
+      <label for="Name" className="block text-sm font-medium text-slate-700">Nom</label>
+      <input type="text" id="Name" name="Name" className="focus:outline-none mt-1 p-2 block w-full rounded-md  shadow-md after:content-['*'] after:ml-0.5 after:text-red-500" onChange={handleChange} placeholder="John Doe" required></input>
     </div>
     
 

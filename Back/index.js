@@ -4,6 +4,7 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 app.use(express.json());
+//ici c pour parser all the json files recu du front
 app.listen(3000,()=>
 console.log('listening on port 3000..'))
 app.use(express.urlencoded({extended: true}))
@@ -171,11 +172,10 @@ app.get('/Staff', (req, res) => {
 
 
   app.post("/", (req, res) => {
-    const q = "INSERT INTO commande (`IdComm`, `Name`, `Surname`, `phoneNumber` ,`jour` ,`tableR` ,`Chreno` ) VALUES (?)";
+    const q = "INSERT INTO commande ( `Name`, `Surname`, `phoneNumber` ,`jour` ,`tableR` ,`Chreno` ) VALUES (?)";
     const values = [
-      req.body.IdComm,
       req.body.Name,
-      req.body.SurName,
+      req.body.Surname,
       req.body.phoneNumber,
       req.body.jour,
       req.body.tableR,
@@ -187,3 +187,5 @@ app.get('/Staff', (req, res) => {
       return res.json(data);
     });
   });
+
+  

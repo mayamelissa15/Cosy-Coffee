@@ -3,6 +3,7 @@ import { BrowserRouter as Router , Route , Routes } from "react-router-dom";
 import HomePage from "./HomePage";
 import AdminMenu from "./AdminMenu";
 import Login from "./Login";
+import Registration from "./Registration";
 import UserMenu from "./UserMenu";
 import CoffeMenu from "./CoffeMenu";
 import PastryMenu from "./PastryMenu";
@@ -24,6 +25,7 @@ function App() {
     <Route path='/' exact Component={HomePage} />
     <Route path='/AdminMenu' Component={AdminMenu}/>
     <Route path='/Login' Component={Login}/>
+    <Route path='/Registration' Component={Registration}/>
     <Route path='/UserMenu' Component={UserMenu}></Route>
     <Route path='/UserMenu2' Component={UserMenu2}></Route>
     <Route path='AdminMenu/CoffeMenu' Component={CoffeMenu}></Route>

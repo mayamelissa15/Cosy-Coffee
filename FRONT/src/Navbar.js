@@ -21,8 +21,10 @@ const Navbar = () => {
      </ul>
  </div>
  <div class="flex justify-between gap-2 p-4">
- <button className="bg-[#7B3F00] text-white px-6 py-2 m-2 rounded-full hover:shadow-md  hover:bg-black duration-500 ">Sign up </button>
+ <Link to='/Registration'><button className="bg-[#7B3F00] text-white px-6 py-2 m-2 rounded-full hover:shadow-md  hover:bg-black duration-500 ">Sign up </button></Link>
+ <Link to='/Login'>
  <button class=" px-6 py-2 m-2  rounded-full hover:shadow-md  duration-500 ">Login </button>
+ </Link>
  
  </div>
     </navbar>

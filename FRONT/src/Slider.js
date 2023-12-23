@@ -35,8 +35,8 @@ const Slider = ({props}) => {
             <p className="text-lg font-normal text-slate-800  py-2 ">  Our café offers a carefully curated selection of delightful and cosy treats</p>
           </div>
           <div className="slide ">
-           <div className="bg-white rounded-full p-8 hover:bg-black hover:text-white duration-500"><BtnSlider moveSlide={prevSlide} direction="prev" ></BtnSlider></div> 
-           <div className="bg-white rounded-full p-8 hover:bg-black hover:text-white duration-500" > <BtnSlider moveSlide={nextSlide} direction="next" ></BtnSlider></div>
+           <div className="bg-white rounded-full p-8 hover:bg-[#F5F5DC] hover:text-white duration-500"><BtnSlider moveSlide={prevSlide} direction="prev" ></BtnSlider></div> 
+           <div className="bg-white rounded-full p-8 hover:bg-[#F5F5DC] hover:text-white duration-500" > <BtnSlider moveSlide={nextSlide} direction="next" ></BtnSlider></div>
           </div>
         </div>
   

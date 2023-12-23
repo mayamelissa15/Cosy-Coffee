@@ -1,16 +1,10 @@
 Front end 
-je dois continuer a designer 
+
 je dois mettres des conditions sur les elements quon va entrer dans les formulaires 
 continuer mon menu
-utiliser mes routes sur tout mon projet , bien l'arranger 
- apres midi jeudi
-back end 
-1 journée complete ou deux journee 
+ 
 sign in , sign up  for the admin so he can access the data 
 logout 
-rajouter lofique des reservation de la table car sinon projet vide 
+rajouter logique des reservation de la table car sinon projet vide important 
 
-( specifiez un week end )
-
-
-la maintenant je dois arranger sidebar
+nriglo  profil -> edit profil +  w le nom w pastry

@@ -15,7 +15,7 @@ const Services = () => {
    <div className=" flex justify-around gap-8 p-12 z-10">
     
     <Cards title='Types of coffee' text='some information about that' image={cup} ></Cards>
-    <Cards title='Bean varieties' text='some information about that' image={pastry}></Cards>
+    <Cards title='Types of cupcakes' text='some information about that' image={pastry}></Cards>
     <Cards title='Pastry' text='some information about that' image={pastry2}></Cards>
     <Cards title='coffee to go ' text='some information about that' image={cup2}></Cards>
    </div>
