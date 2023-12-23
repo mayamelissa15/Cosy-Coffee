@@ -24,7 +24,7 @@ console.log(staffId)
         e.preventDefault()
         //using axios to send data 
         try{await axios.put(`http://localhost:3000/Staff/${staffId}`, staff)
-        navigate("/Staff")
+        navigate("/AdminMenu/Staff")
         }catch(err){
             console.log('ERREUR' ,err)
         }

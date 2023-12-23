@@ -21,7 +21,7 @@ import axios from 'axios'
         e.preventDefault()
         //using axios to send data 
         try{await axios.post("http://localhost:3000/AddingPastry" , Pastry)
-        navigate("/PastryMenu")
+        navigate("/AdminMenu/PastryMenu")
         }catch(err){
             console.log('ERREUR' ,err)
         }
@@ -35,7 +35,7 @@ import axios from 'axios'
    <form className="flex flex-col w-[500px] shadow-md bg-white p-16 rounded-xl">
    <div className="mb-4">
       <label for="id" className="block text-sm font-medium text-slate-700">Numero de Patisserie</label>
-      <input type="number" id="id" onChange={handleChange}   name="idPatisserie" className="focus:outline-none mt-1 p-2 block w-full rounded-md  shadow-md "  required></input>
+      <input type="number" id="id" onChange={handleChange}   name="IdPatisserie" className="focus:outline-none mt-1 p-2 block w-full rounded-md  shadow-md "  required></input>
     </div>
     <div className="mb-4">
       <label for="name" className="block text-sm font-medium text-slate-700">Nom </label>
@@ -51,9 +51,11 @@ import axios from 'axios'
       <input type="number" id="PRICE"  onChange={handleChange} name="PRICE" className="focus:outline-none mt-1 p-2 block w-full rounded-md    shadow-md focus:border-none"  required></input>
     </div>
 
+    
     <div className="text-center p-16">
-      <button type="submit" className="bg-[#F5F5DC] text-white px-6 py-2 mx-2 rounded-full hover:shadow-md  hover:bg-white hover:text-black duration-500 " onClick={HandleClick}>Ajouter</button>
+      <button type="submit" className="bg-[Black] text-white px-6 py-2 mx-2 rounded-full hover:shadow-md  hover:bg-white hover:text-black duration-500 " onClick={HandleClick}>Ajouter</button>
     </div>
+    
 
   </form>
    </div>

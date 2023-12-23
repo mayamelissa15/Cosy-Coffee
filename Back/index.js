@@ -130,10 +130,10 @@ app.get('/Staff', (req, res) => {
       return res.json(data);
     });
   });
-  app.post("/AddingPatisserie", (req, res) => {
+  app.post("/AddingPastry", (req, res) => {
     const q = "INSERT INTO Patisserie (`IdPatisserie`, `Name`, `Description`, `PRICE` ) VALUES (?)";
     const values = [
-      req.body.idPatisserie,
+      req.body.IdPatisserie,
       req.body.Name,
       req.body.Description,
       req.body.PRICE,
@@ -149,6 +149,19 @@ app.get('/Staff', (req, res) => {
   app.delete('/CoffeMenu/:id' , (req,res) =>{
     const id = req.params.id;
     const q = "DELETE FROM cafe WHERE IdCafe = ? "
+    db.query(q,[id], (err,data)=>{
+        if(err){return res.json(err)}
+        else{
+            return res.json('cafe  has been deleted successfully !')
+            
+        }
+    })
+
+
+  })
+  app.delete('/PastryMenu/:id' , (req,res) =>{
+    const id = req.params.id;
+    const q = "DELETE FROM Patisserie WHERE IdPatisserie = ? "
     db.query(q,[id], (err,data)=>{
         if(err){return res.json(err)}
         else{
@@ -181,7 +194,27 @@ app.get('/Staff', (req, res) => {
 
 
   })
+  app.put('/PastryMenu/:id' , (req,res) =>{
+    const id = req.params.id;
+    const q = "UPDATE patisserie SET `IdPatisserie`= ?, `Name`= ?, `Description`= ?, `PRICE`= ?WHERE IdPatisserie= ?  "
+    const values = [
+        req.body.idCafe,
+        req.body.Name,
+        req.body.Description,
+        req.body.PRICE,
 
+      ];
+      //...values all the values 
+    db.query(q,[...values,id], (err,data)=>{
+        if(err){return res.json(err)}
+        else{
+            return res.json('element has been updated successfully !')
+            
+        }
+    })
+
+
+  })
 
   
   app.get('/Reservation', (req, res) => {

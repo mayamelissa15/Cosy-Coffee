@@ -73,9 +73,11 @@ const handleDelete = async (IdStaff)=>{
     </tbody>
   </table>
   <div className="mt-4 flex flex-row-reverse">
-  <button class="mr-4 py-3 px-4 rounded-full border-0 text-md font-normal
+ <Link to='/AddingStaff'>
+ <button class="mr-4 py-3 px-4 rounded-full border-0 text-md font-normal
     bg-green-500 text-white
       hover:bg-green-400 hover:text-white  duration-500">add</button>
+ </Link>
   </div>
 </div>
 </div>
