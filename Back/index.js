@@ -231,7 +231,6 @@ app.get('/Staff', (req, res) => {
  
    app.post("/Formulaire", (req, res) => {
      const { Name, Surname, phoneNumber, jour, tableR, libre, Chreno } = req.body;
-  
      // Check if the table is free
      const checkTableQuery = "SELECT * FROM commande WHERE tableR = ? AND libre = 1  ";
      db.query(checkTableQuery, [tableR], (tableErr, tableData) => {
@@ -243,7 +242,6 @@ app.get('/Staff', (req, res) => {
           //Table is not free
          return res.status(400).json({ error: "Table est occupé choisissez une autre table" });
        }
-  
         //Table is free,do the reservation
        const insertReservationQuery =
          "INSERT INTO commande (`Name`, `Surname`, `phoneNumber`, `jour`, `tableR`,`libre`, `Chreno` ) VALUES (?)";
