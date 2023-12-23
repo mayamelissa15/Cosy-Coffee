@@ -22,7 +22,7 @@ const Registration = () => {
     return ( <div className="bg-[#F5F5DC] mx-auto my-32 w-[960px] p-10 shadow-md ">
         
     <div className="py-2 ">
-    <p className="text-md text-slate-400 font-medium  py-1">join our family and discover us </p>
+    <p className="text-md text-[#7B3F00] font-medium  py-1">join our family and discover us </p>
         <h1 className="text-3xl text-black font-semibold py-2">Create a new account</h1> 
         <p className="text-sm text-black font-medium  py-2">Already a member ? <Link to='/Login' className="text-[#7B3F00]"> Join us</Link></p>
 
