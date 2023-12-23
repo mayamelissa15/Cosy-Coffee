@@ -22,7 +22,7 @@ const Id = location.pathname.split("/")[2]
         e.preventDefault()
         //using axios to send data 
         try{await axios.put(`http://localhost:3000/CoffeMenu/${Id}`, cafe)
-        navigate("/CoffeMenu")
+        navigate("/AdminMenu/CoffeMenu")
         }catch(err){
             console.log('ERREUR' ,err)
         }

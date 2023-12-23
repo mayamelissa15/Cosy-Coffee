@@ -21,7 +21,7 @@ import axios from 'axios'
         e.preventDefault()
         //using axios to send data 
         try{await axios.post("http://localhost:3000/AddingCafe" , staff)
-        navigate("/CoffeMenu")
+        navigate("/AdminMenu/CoffeMenu")
         }catch(err){
             console.log('ERREUR' ,err)
         }

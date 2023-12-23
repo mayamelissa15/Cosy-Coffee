@@ -1,12 +1,1 @@
-Front end 
-
-je dois mettres des conditions sur les elements quon va entrer dans les formulaires 
-continuer mon menu
- 
-sign in , sign up  for the admin so he can access the data 
-logout 
-rajouter logique des reservation de la table car sinon projet vide important 
-
-nriglo  profil -> edit profil +  w le nom w pastry
-
-nriglo design admin menu pr quil soit coherent
+8
