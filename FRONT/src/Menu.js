@@ -12,7 +12,7 @@ const Menu = () => {
      </p>
 <Link to='/formulaire'>
      <div className="flex flex-row text-xs font-medium">
-     <button type="submit" className="cursor-pointer bg-[#7B3F00] mx-auto text-white px-6 py-3 mx-2 rounded-full hover:shadow-md  hover:bg-black duration-500 ">Command</button>
+     <button type="submit" className="cursor-pointer bg-[#7B3F00] mx-auto text-white px-6 py-3 mx-2 rounded-full hover:shadow-md  hover:bg-[#F5F5DC] hover:text-[#7B3F00] duration-500 ">Command</button>
      </div></Link>
             </div>
 <img src={coffee} className='w-full h-full py-2'></img>

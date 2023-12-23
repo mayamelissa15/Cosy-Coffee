@@ -28,7 +28,7 @@ const Login = () => {
     </div>
     
     <div className="p-8">
-      <button type="submit" className="bg-[#7B3F00] text-white px-6 py-2 mx-2 rounded-full hover:shadow-md  hover:bg-black duration-500 ">Subscribe</button>
+      <button type="submit" className="bg-[#7B3F00] text-white px-6 py-2 mx-2 rounded-full hover:shadow-md  hover:bg-[#F5F5DC] hover:text-[#7B3F00] duration-500 ">Subscribe</button>
     </div>
         </form></div>
         </div> </div>

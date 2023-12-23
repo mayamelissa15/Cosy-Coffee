@@ -8,3 +8,5 @@ logout
 rajouter logique des reservation de la table car sinon projet vide important 
 
 nriglo  profil -> edit profil +  w le nom w pastry
+
+nriglo design admin menu pr quil soit coherent

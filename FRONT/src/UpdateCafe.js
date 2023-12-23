@@ -55,7 +55,7 @@ const Id = location.pathname.split("/")[2]
     </div>
 
     <div className="text-center p-16">
-      <button className="bg-[Black] text-white px-6 py-2 mx-2 rounded-full hover:shadow-md  hover:bg-white hover:text-black duration-500 " onClick={HandleClick}>Update</button>
+      <button className="bg-[#7B3F00] text-white font-medium px-6 py-2 mx-2 rounded-full hover:shadow-md  hover:bg-[#F5F5DC] hover:text-[#7B3F00] hover:text-black duration-500 " onClick={HandleClick}>Update</button>
     </div>
 
 
