@@ -169,23 +169,70 @@ app.get('/Staff', (req, res) => {
     });
   });
 
+ 
+   app.post("/Formulaire", (req, res) => {
+     const { Name, Surname, phoneNumber, jour, tableR, libre, Chreno } = req.body;
+  
+     // Check if the table is free
+     const checkTableQuery = "SELECT * FROM commande WHERE tableR = ? AND libre = 1  ";
+     db.query(checkTableQuery, [tableR], (tableErr, tableData) => {
+       if (tableErr) {
+         return res.status(500).json({ error: "Error checking table availability." });
+       }
+       // jai rien trouve de libre 
+       if (tableData.length === 0 ) {
+          //Table is not free
+         return res.status(400).json({ error: "Table est occupé choisissez une autre table" });
+       }
+  
+        //Table is free,do the reservation
+       const insertReservationQuery =
+         "INSERT INTO commande (`Name`, `Surname`, `phoneNumber`, `jour`, `tableR`,`libre`, `Chreno` ) VALUES (?)";
+       const values = [Name, Surname, phoneNumber, jour, tableR, libre , Chreno];
+  
+       db.query(insertReservationQuery, [values], (err, data) => {
+         if (err) {
+           return res.status(500).json({ error: "Error inserting into commande table." });
+         }
+  
+         return res.json({ success: true, reservation: data });
+       });
+     });
+   });
+  
+  
 
-
-  app.post("/", (req, res) => {
-    const q = "INSERT INTO commande ( `Name`, `Surname`, `phoneNumber` ,`jour` ,`tableR` ,`Chreno` ) VALUES (?)";
+ 
+  
+  app.post('/Registration' ,(req,res)=>{
+    const q= "INSERT INTO admin (`username` , `password` ) VALUES (?) "
     const values = [
-      req.body.Name,
-      req.body.Surname,
-      req.body.phoneNumber,
-      req.body.jour,
-      req.body.tableR,
-      req.body.Chreno
-    ];
-    console.log(req)
-    db.query(q, [values], (err, data) => {
+      req.body.username,
+      req.body.password
+    ]
+    db.query(q, [values],(err,data)=>{
       if (err) return res.send(err);
       return res.json(data);
+    })
+
+
+  })
+
+  app.post('/Login', (req, res) => {
+    const q = "SELECT * FROM admin WHERE username = ? AND password = ?";
+    const values = [req.body.username, req.body.password];
+  
+    db.query(q, values, (err, data) => {
+      if (err) {
+        res.send(err);
+      } else {
+        if (data.length > 0) {
+          res.send(data);
+        } else {
+          res.send({ message: 'Wrong username/password, try again' });
+        }
+      }
     });
   });
-
   
+ 

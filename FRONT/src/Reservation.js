@@ -42,6 +42,7 @@ const Reservation = () => {
         <th class="text-md text-slate-600 font-medium border-b py-4">Surname</th>
         <th class="text-md text-slate-600 font-medium border-b py-4">Numero</th>
         <th class="text-md text-slate-600 font-medium border-b py-4">Table</th>
+        <th class="text-md text-slate-600 font-medium border-b py-4">disponibilite</th>
         <th class="text-md text-slate-600 font-medium border-b py-4">jour</th>
         <th class="text-md text-slate-600 font-medium border-b py-4">Horaires</th>
       </tr>
@@ -55,6 +56,7 @@ const Reservation = () => {
         <td class="text-md font-normal text-[#19182580]  py-3 border-b p-4">{person.Surname}</td>
         <td class="text-md font-normal text-[#19182580]  py-3 border-b p-4">{person.phoneNumber}</td>
         <td class="text-md font-normal text-[#19182580]  py-3 border-b p-4">{person.tableR}</td>
+        <td class="text-md font-normal text-[#19182580]  py-3 border-b p-4">{person.libre}</td>
         <td class="text-md font-normal text-[#19182580]  py-3 border-b p-4">{person.jour}</td>
         <td class="text-md font-normal text-[#19182580]  py-3 border-b p-4">{person.Chreno}</td>
         <td class="border-b py-4  ">
